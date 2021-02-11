@@ -1,34 +1,39 @@
-<h1>Burgers Galore !!!</h1>
+<h1 class="center">Burgers Galore !!!</h1>
 
-<h2>Burgers!</h2>
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8YnVyZ2VyfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80" width="10%" class="center2" alt="burger">
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
+<h2 class="center">Burgers!</h2>
+<div class="adjust center center2">
+
+  <p>{{#each burgers}}
+   <p>{{#unless devoured}}
+     <p> {{> burgers/burger-block devoured=true}}
+    <p>{{/unless}}
   {{/each}}
-</ul>
 
-<h2>Devoured Burgers!</h2>
+</div>
+<h2 class="center">Devoured Burgers!</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
+<div class="adjust center center2">
+  <p>{{#each burgers}}
+    <p>{{#if devoured}}
+    <p>  {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-</ul>
+</div>
+<br>
+<br>
 
-<h2>Add a Burger</h2>
+
 <form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+  <div class="form-group center2">
+    <label  for="ca"></label>
+    <input type="text" id="ca" name="name" class="center2">
   </div>
+  <p>
 
   
 
-  <button type="submit">Add Burger</button>
+  <button class="center2" type="submit">Add Burger Name</button>
 </form>
